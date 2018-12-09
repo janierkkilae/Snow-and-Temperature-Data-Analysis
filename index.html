@@ -1,781 +1,309 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cayman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Cayman</h1>
+      <h2 class="project-tagline">A responsive theme for your project on GitHub Pages</h2>
+      <a href="#" class="btn">View on GitHub</a>
+      <a href="#" class="btn">Download .zip</a>
+      <a href="#" class="btn">Download .tar.gz</a>
+    </section>
 
-<head>
-  <meta charset="utf-8">
-  <title>Dashboard</title>
-  <script>
-    function startTime() {
-      var today = new Date();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTime(m);
-      s = checkTime(s);
-      document.getElementById('txt').innerHTML =
-        h + ":" + m + ":" + s;
-      var t = setTimeout(startTime, 500);
-    }
+    <section class="main-content">
+      <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>. <a href="https://github.com">Links</a> should be blue with no underlines (unless hovered over).</p>
 
-    function checkTime(i) {
-      if (i < 10) {
-        i = "0" + i
-      }; // add zero in front of numbers < 10
-      return i;
-    }
-  </script>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <script>
-    L_PREFER_CANVAS = false;
-    L_NO_TOUCH = false;
-    L_DISABLE_3D = false;
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
-  <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css">
-  <style>
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-      padding: 0px;
-    }
-  </style>
-  <style>
-    #map {
-      position: absolute;
-      top: 0px;
-      bottom: 0px;
-      right: 0px;
-      left: 0px;
-    }
-  </style>
-  <style>
-    #map_7c06e6df300443cba5bb5f92b0930476 {
-      position: absolute;
-      left: 200px;
-      right: 300px;
-      top: 500px;
-      height: 180px;
-    }
-  </style>
-  <meta name="generator" content="Google Web Designer 4.2.0.0802">
-  <style type="text/css" id="gwd-text-style">
-    p {
-      margin: 0px;
-    }
-    h1 {
-      margin: 0px;
-    }
-    h2 {
-      margin: 0px;
-    }
-    h3 {
-      margin: 0px;
-    }
-  </style>
-  <style type="text/css">
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-    }
-    body {
-      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      transform-style: preserve-3d;
-      background-image: none;
-      background-color: rgb(7, 7, 7);
-    }
-    .gwd-p-16ye {
-      position: absolute;
-      font-family: Ubuntu;
-      font-size: 45px;
-      font-weight: bold;
-      background-image: none;
-      background-color: transparent;
-      color: rgb(231, 224, 224);
-      left: 24px;
-      top: 27px;
-      width: 250px;
-      height: 70px;
-      transform-origin: -64.8785px 34.0312px 0px;
-    }
-    .gwd-p-8tmp {
-      position: absolute;
-      font-family: Ubuntu;
-      height: 45px;
-      transform-origin: 120.16px 18.16px 0px;
-      width: 153px;
-      font-size: 24px;
-      left: 31px;
-      top: 258px;
-    }
-    .gwd-img-1qgi {
-      position: absolute;
-      width: 223px;
-      height: 72px;
-      transform-origin: 111.276px 35.8001px 0px;
-      left: 40px;
-      top: 171px;
-    }
-    .gwd-img-17dk {
-      left: 41px;
-      top: 253px;
-    }
-    .gwd-img-1eo7 {
-      left: 43px;
-      top: 336px;
-    }
-    .gwd-p-lw7o {
-      position: absolute;
-      width: 131px;
-      height: 22px;
-      transform-origin: 47.0486px 36.8924px 0px;
-      font-family: Ubuntu;
-      left: 261px;
-      top: 174px;
-    }
-    .gwd-p-30no {
-      position: absolute;
-      width: 127.014px;
-      height: 48.8889px;
-      font-family: Ubuntu;
-      text-align: right;
-      font-size: 32px;
-      left: 262px;
-      top: 194px;
-    }
-    .gwd-p-b193 {
-      left: 268px;
-      top: 360px;
-    }
-    .gwd-p-1ck6 {
-      left: 268px;
-      top: 251px;
-    }
-    .gwd-p-v31l {
-      left: 261px;
-      top: 174px;
-    }
-    .gwd-p-1n8j {
-      left: 268px;
-      top: 334px;
-    }
-    .gwd-p-l1s3 {
-      left: 264px;
-      top: 278px;
-    }
-    .gwd-img-zfpa {
-      left: 41px;
-    }
-    .gwd-p-14ot {
-      left: 264px;
-    }
-    .gwd-p-1m3y {
-      left: 266px;
-    }
-    .gwd-img-5hi0 {
-      width: 269.04px;
-      height: 86.87px;
-      left: 500px;
-      top: 297px;
-    }
-    .gwd-img-1i19 {
-      width: 269.04px;
-      height: 86.87px;
-      left: 502px;
-      top: 496px;
-    }
-    .gwd-img-xuyh {
-      width: 269.04px;
-      height: 86.87px;
-      left: 500px;
-      top: 396px;
-    }
-    .gwd-p-1lk6 {
-      width: 158.04px;
-      height: 26.53px;
-      top: 300px;
-      left: 784px;
-      font-size: 20px;
-    }
-    .gwd-p-1mtz {
-      width: 158.04px;
-      height: 26.53px;
-      top: 493px;
-      left: 787px;
-      font-size: 20px;
-    }
-    .gwd-p-1q76 {
-      width: 158.04px;
-      height: 26.53px;
-      top: 393px;
-      left: 787px;
-      font-size: 20px;
-    }
-    .gwd-p-1qww {
-      width: 153.24px;
-      height: 58.98px;
-      top: 324px;
-      left: 782px;
-    }
-    .gwd-p-1e5r {
-      width: 153.24px;
-      height: 58.98px;
-      top: 426px;
-      left: 782px;
-    }
-    .gwd-p-j13q {
-      width: 153.24px;
-      height: 58.98px;
-      top: 525px;
-      left: 787px;
-    }
-    .gwd-div-faaw {
-      position: absolute;
-      width: 447.654px;
-      height: 89.2045px;
-      left: 43.007px;
-      top: 407.992px;
-    }
-    #map_7c06e6df300443cba5bb5f92b0930476 {
-      transform-origin: 131.484px 66.9612px 0px;
-      left: 635px;
-      top: 38px;
-      width: 289px;
-      height: 196px;
-    }
-    .gwd-img-nqrh {
-      width: 269.04px;
-      height: 86.87px;
-      left: 32px;
-      top: 294px;
-    }
-    .gwd-img-i484 {
-      width: 269.04px;
-      height: 86.87px;
-      left: 34px;
-      top: 493px;
-    }
-    .gwd-img-1qlu {
-      width: 269.04px;
-      height: 86.87px;
-      left: 32px;
-      top: 393px;
-    }
-    .gwd-p-13x6 {
-      width: 158.04px;
-      height: 26.53px;
-      top: 298px;
-      left: 313px;
-      font-size: 20px;
-    }
-    .gwd-p-xbx3 {
-      width: 158px;
-      height: 60px;
-      transform-origin: 515.047px -154.109px 0px;
-      font-size: 20px;
-      left: 319px;
-      top: 496px;
-    }
-    .gwd-p-6lwi {
-      width: 158.04px;
-      height: 26.53px;
-      top: 391px;
-      left: 316px;
-      font-size: 20px;
-    }
-    .gwd-p-omc8 {
-      width: 153.24px;
-      height: 58.98px;
-      top: 322px;
-      left: 311px;
-    }
-    .gwd-p-1sva {
-      width: 153.24px;
-      height: 58.98px;
-      top: 423px;
-      left: 311px;
-    }
-    .gwd-p-xlic {
-      width: 153.24px;
-      height: 58.98px;
-      top: 522px;
-      left: 316px;
-    }
-    .gwd-iframe-1mkl {
-      position: absolute;
-      top: 38px;
-      height: 196px;
-      left: 327px;
-      width: 308px;
-      transform-origin: 153.83px 97.9861px 0px;
-    }
-    .gwd-p-1ona {
-      left: 38px;
-      top: 610px;
-    }
-    .gwd-p-jzmm {
-      top: 650px;
-      left: 791px;
-    }
-    .gwd-p-6b3u {
-      top: 674px;
-      left: 772px;
-    }
-    .gwd-img-nrs7 {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background-image: none;
-      background-color: rgb(131, 139, 128);
-      transform-origin: 135.556px 85.3333px 0px;
-      top: 98px;
-      left: 29px;
-    }
-    .gwd-span-a6o0 {
-      position: absolute;
-      font-family: Ubuntu;
-      width: 216px;
-      transform-origin: -69.8889px -97.9861px 0px;
-      height: 80px;
-      font-size: 16px;
-      left: 29px;
-      top: 159px;
-    }
-    .gwd-span-11ik {
-      font-weight: normal;
-    }
-    .gwd-span-hn9s {
-      font-size: 51px;
-    }
-    .gwd-p-z4wt {
-      top: 1503px;
-    }
-    .gwd-p-9aqh {
-      top: 945px;
-    }
-    .gwd-img-ul00 {
-      left: 39px;
-      top: 651px;
-    }
-    .gwd-img-1wuh {
-      left: 41px;
-      top: 850px;
-    }
-    .gwd-img-1dq2 {
-      left: 39px;
-      top: 750px;
-    }
-    .gwd-p-unxm {
-      left: 320px;
-      top: 655px;
-    }
-    .gwd-p-15bm {
-      left: 326px;
-      top: 853px;
-    }
-    .gwd-p-4975 {
-      left: 323px;
-      top: 748px;
-    }
-    .gwd-p-apg0 {
-      left: 318px;
-      top: 679px;
-    }
-    .gwd-p-14zt {
-      left: 318px;
-      top: 780px;
-    }
-    .gwd-p-1n8t {
-      left: 323px;
-      top: 879px;
-    }
-    .gwd-img-3u2s {
-      left: 507px;
-      top: 654px;
-    }
-    .gwd-img-1p5y {
-      left: 509px;
-      top: 853px;
-    }
-    .gwd-img-80ji {
-      left: 507px;
-      top: 753px;
-    }
-    .gwd-p-17j9 {
-      left: 791px;
-      top: 657px;
-    }
-    .gwd-p-fyse {
-      left: 794px;
-      top: 850px;
-    }
-    .gwd-p-1ep2 {
-      left: 794px;
-      top: 750px;
-    }
-    .gwd-p-2lgi {
-      left: 789px;
-      top: 681px;
-    }
-    .gwd-p-92rn {
-      left: 789px;
-      top: 783px;
-    }
-    .gwd-p-1bv3 {
-      left: 794px;
-      top: 882px;
-    }
-    .gwd-img-1ixz {
-      position: absolute;
-      width: 1000px;
-      height: 500px;
-      top: 984px;
-      left: -5px;
-    }
-    .gwd-table-1eo0 {
-      position: absolute;
-      height: 1415px;
-      left: 968px;
-      top: 67px;
-      width: 534px;
-      transform-origin: 313.422px 706.484px 0px;
-    }
-    .gwd-p-1w82 {
-      left: 973px;
-      top: 27px;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,italic,500,500italic,700,700italic,400" rel="stylesheet" type="text/css">
-</head>
+      <p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
 
-<body class="htmlNoPages" onload="startTime()">
-  <div id="txt"></div>
-  <p class="gwd-p-16ye"><span class="gwd-span-hn9s">Brussels</span><br>
-    
-    <span class="gwd-span-11ik">&nbsp; &nbsp; &nbsp; &nbsp; X3</span>
-  </p>
-  <p class="gwd-p-8tmp">FOREX</p>
-  <img src="assets/A1.png" class="gwd-img-1qgi gwd-img-zfpa gwd-img-nqrh">
-  <img src="assets/A3.png" class="gwd-img-1qgi gwd-img-1eo7 gwd-img-i484">
-  <img src="assets/A2.png" class="gwd-img-1qgi gwd-img-17dk gwd-img-1qlu">
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1m3y gwd-p-13x6">Metric 1</p>
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1n8j gwd-p-xbx3">Metric 3</p>
-  <p class="gwd-p-lw7o gwd-p-1ck6 gwd-p-6lwi">Metric 2</p>
-  <p class="gwd-p-30no gwd-p-14ot gwd-p-omc8">Value 1</p>
-  <p class="gwd-p-30no gwd-p-l1s3 gwd-p-1sva">Value 2</p>
-  <p class="gwd-p-30no gwd-p-b193 gwd-p-xlic">Value 3</p>
-  <img src="assets/A4.png" class="gwd-img-1qgi gwd-img-zfpa gwd-img-5hi0">
-  <img src="assets/A6.png" class="gwd-img-1qgi gwd-img-1eo7 gwd-img-1i19">
-  <img src="assets/A5.png" class="gwd-img-1qgi gwd-img-17dk gwd-img-xuyh">
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1m3y gwd-p-1lk6">Metric 4</p>
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1m3y gwd-p-1lk6 gwd-p-1w82">Headlines</p>
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1n8j gwd-p-1mtz">Metric 6</p>
-  <p class="gwd-p-lw7o gwd-p-1ck6 gwd-p-1q76">Metric 5</p>
-  <p class="gwd-p-30no gwd-p-14ot gwd-p-1qww">Value 4</p>
-  <p class="gwd-p-30no gwd-p-l1s3 gwd-p-1e5r">Value 5</p>
-  <p class="gwd-p-30no gwd-p-b193 gwd-p-j13q">Value 6</p>
-  <img src="assets/B1.png" class="gwd-img-1qgi gwd-img-zfpa gwd-img-nqrh gwd-img-ul00">
-  <img src="assets/B3.png" class="gwd-img-1qgi gwd-img-1eo7 gwd-img-i484 gwd-img-1wuh">
-  <img src="assets/B2.png" class="gwd-img-1qgi gwd-img-17dk gwd-img-1qlu gwd-img-1dq2">
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1m3y gwd-p-13x6 gwd-p-unxm">Metric B1</p>
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1n8j gwd-p-xbx3 gwd-p-15bm">Metric B3</p>
-  <p class="gwd-p-lw7o gwd-p-1ck6 gwd-p-6lwi gwd-p-4975">Metric B2</p>
-  <p class="gwd-p-30no gwd-p-14ot gwd-p-omc8 gwd-p-apg0">Value B1</p>
-  <p class="gwd-p-30no gwd-p-l1s3 gwd-p-1sva gwd-p-14zt">Value B2</p>
-  <p class="gwd-p-30no gwd-p-b193 gwd-p-xlic gwd-p-1n8t">Value B3</p>
-  <img src="assets/B4.png" class="gwd-img-1qgi gwd-img-zfpa gwd-img-5hi0 gwd-img-3u2s">
-  <img src="assets/B6.png" class="gwd-img-1qgi gwd-img-1eo7 gwd-img-1i19 gwd-img-1p5y">
-  <img src="assets/B5.png" class="gwd-img-1qgi gwd-img-17dk gwd-img-xuyh gwd-img-80ji">
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1m3y gwd-p-1lk6 gwd-p-17j9">Metric B4</p>
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1n8j gwd-p-1mtz gwd-p-fyse">Metric B6</p>
-  <p class="gwd-p-lw7o gwd-p-1ck6 gwd-p-1q76 gwd-p-1ep2">Metric B5</p>
-  <p class="gwd-p-30no gwd-p-14ot gwd-p-1qww gwd-p-2lgi">Value B4</p>
-  <p class="gwd-p-30no gwd-p-l1s3 gwd-p-1e5r gwd-p-92rn">Value B5</p>
-  <p class="gwd-p-30no gwd-p-b193 gwd-p-j13q gwd-p-1bv3">Value B6</p>
-  <p class="gwd-p-8tmp gwd-p-1ona">Stocks</p>
-  <p class="gwd-p-lw7o gwd-p-v31l gwd-p-1m3y gwd-p-13x6 gwd-p-jzmm gwd-p-z4wt">Metric 9</p>
-  <p class="gwd-p-30no gwd-p-14ot gwd-p-omc8 gwd-p-6b3u gwd-p-9aqh">Value 9</p>
-  <div class="folium-map" id="map_7c06e6df300443cba5bb5f92b0930476"></div>
-  <script>
-    var bounds = null;
+      <p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
 
+      <blockquote>
+      <p>There should be no margin above this first sentence.</p>
 
-    var map_7c06e6df300443cba5bb5f92b0930476 = L.map(
-      'map_7c06e6df300443cba5bb5f92b0930476', {
-        center: [40.015, -105.2705],
-        zoom: 1,
-        maxBounds: bounds,
-        layers: [],
-        worldCopyJump: false,
-        crs: L.CRS.EPSG3857,
-        zoomControl: true,
-      });
+      <p>Blockquotes should be a lighter gray with a gray border along the left side.</p>
 
+      <p>There should be no margin below this final sentence.</p>
+      </blockquote>
 
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 1</h1>
 
-    var tile_layer_076d8dbbf27a4ccb9d88566642276813 = L.tileLayer(
-      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        "attribution": null,
-        "detectRetina": false,
-        "maxNativeZoom": 18,
-        "maxZoom": 18,
-        "minZoom": 0,
-        "noWrap": false,
-        "subdomains": "abc"
-      }).addTo(map_7c06e6df300443cba5bb5f92b0930476);
-  </script>
-  <iframe class="gwd-iframe-1mkl" width="480" height="270" scrolling="no" allowfullscreen="" webkitallowfullscreen="" frameborder="0" style="border: 0px none transparent;" src="https://www.ustream.tv/embed/9408562?html5ui&amp;controls=false&amp;autoplay=true&amp;volume=0"></iframe>
-  <img src="assets/50n.png" class="gwd-img-nrs7"><span class="gwd-span-a6o0">Visibility: X1<br class="">X2<br class=""><br class=""></span>
-  <img src="assets/plot1.png" class="gwd-img-1ixz">
-  <table class="gwd-table-1eo0">
-    <tbody>
+      <p>This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
+
+      <h2>
+      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 2</h2>
+
+      <blockquote>
+      <p>This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.</p>
+      </blockquote>
+
+      <h3>
+      <a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 3</h3>
+
+      <pre><code>This is a code block following a header.</code></pre>
+
+      <h4>
+      <a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 4</h4>
+
+      <ul class="task-list">
+      <li>This is an unordered list following a header.</li>
+      <li>This is an unordered list following a header.</li>
+      <li>This is an unordered list following a header.</li>
+      </ul>
+
+      <h5>
+      <a id="user-content-header-5" class="anchor" href="#header-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 5</h5>
+
+      <ol class="task-list">
+      <li>This is an ordered list following a header.</li>
+      <li>This is an ordered list following a header.</li>
+      <li>This is an ordered list following a header.</li>
+      </ol>
+
+      <h6>
+      <a id="user-content-header-6" class="anchor" href="#header-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Header 6</h6>
+
+      <table>
+      <thead>
       <tr>
+      <th>What</th>
+      <th>Follows</th>
       </tr>
-<tr>
-<th>
-<a href=https://www.hs.fi/ulkomaat/art-2000005915398.html?ref=rss>Trump perui tapaamisen Putinin kanssa Buenos Airesissa – Syynä Ukrainan kiristynyt tilanne (16:48) - HS</a>
-</th>
-</tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>A table</td>
+      <td>A header</td>
+      </tr>
+      <tr>
+      <td>A table</td>
+      <td>A header</td>
+      </tr>
+      <tr>
+      <td>A table</td>
+      <td>A header</td>
+      </tr>
+      </tbody>
+      </table>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-europe-46384023>Russian clinic in row over female genital cutting (16:38) - BBC</a>
-</th>
-</tr>
+      <hr>
 
-<tr>
-<th>
-<a href=https://www.hs.fi/ulkomaat/art-2000005916070.html?ref=rss>Trumpin lakimies myönsi valehdelleensa kongressille Trumpin Venäjä-yhteyksistä (16:36) - HS</a>
-</th>
-</tr>
+      <p>There's a horizontal rule above and below this.</p>
 
-<tr>
-<th>
-<a href=https://www.hs.fi/ulkomaat/art-2000005916172.html?ref=rss>Kiinan hallitus keskeyttää ihmisten geenien muokkaukseen liittyvät tutkimukset – Tutkija väitti luoneensa maailman ensimmäiset geeni­muokatut vauvat (16:35) - HS</a>
-</th>
-</tr>
+      <hr>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/politik/deutschland/afd-kandidatin-mariana-harder-kuehnel-als-bundestags-vize-durchgefallen-a-1241126.html#ref=rss>Berlin: AfD-Kandidatin Harder-Kühnel als Bundestagsvize durchgefallen (16:29) - Spiegel</a>
-</th>
-</tr>
+      <p>Here is an unordered list:</p>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/wirtschaft/unternehmen/deutsche-bank-die-razzia-zeigt-die-krankheit-des-konzerns-a-1241068.html#ref=rss>Geldwäsche-Razzia: Die Krankheit der Deutschen Bank (16:24) - Spiegel</a>
-</th>
-</tr>
+      <ul class="task-list">
+      <li>Salt-n-Pepa</li>
+      <li>Bel Biv DeVoe</li>
+      <li>Kid 'N Play</li>
+      </ul>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/politik/deutschland/news-des-tages-g20-gipfel-in-buenos-aires-die-themen-die-akteure-a-1241025.html#ref=rss>Der Tag kompakt: Für schlechte Stimmung wird gesorgt (16:15) - Spiegel</a>
-</th>
-</tr>
+      <p>And an ordered list:</p>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-us-canada-46390368>Michael Cohen in court: Trump ex-lawyer admits lying to Congress (16:09) - BBC</a>
-</th>
-</tr>
+      <ol class="task-list">
+      <li>Michael Jackson</li>
+      <li>Michael Bolton</li>
+      <li>Michael Bublé</li>
+      </ol>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/plus/simons-medienkolumne-ueber-bild-chefredakteur-julian-reichelt-und-tschuess-a-55f476f9-d089-4814-bf09-4b6f5b7c5985#ref=rss>"Bild" und PR: Wer einmal die Seite gewechselt hat, braucht bei Julian Reichelt nicht wieder anzuklopfen (16:05) - Spiegel</a>
-</th>
-</tr>
+      <p>And an unordered task list:</p>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/panorama/gesellschaft/mecklenburg-vorpommern-a20-behelfsbruecke-fuer-abgesackte-autobahn-fertig-a-1241114.html#ref=rss>Mecklenburg-Vorpommern: Behelfsbrücke für abgesackte Autobahn 20 fertig (16:03) - Spiegel</a>
-</th>
-</tr>
+      <ul class="task-list">
+      <li class="task-list-item">
+      <input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Create a sample markdown document</li>
+      <li class="task-list-item">
+      <input type="checkbox" class="task-list-item-checkbox" checked="" disabled=""> Add task lists to it</li>
+      <li class="task-list-item">
+      <input type="checkbox" class="task-list-item-checkbox" disabled=""> Take a vacation</li>
+      </ul>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-europe-46386160>Ukraine-Russia sea clash: Merkel blames Vladimir Putin (15:53) - BBC</a>
-</th>
-</tr>
+      <p>And a "mixed" task list:</p>
 
-<tr>
-<th>
-<a href=https://www.hs.fi/politiikka/art-2000005916120.html?ref=rss>Toimeentulotuen vuokrakatto vuotaa ja tuhoaa osaltaan vuokramarkkinoita, Osmo Soininvaaran tuore raportti väittää (15:52) - HS</a>
-</th>
-</tr>
+      <ul class="task-list">
+      <li class="task-list-item">
+      <input type="checkbox" class="task-list-item-checkbox" disabled=""> Steal underpants</li>
+      <li>?</li>
+      <li class="task-list-item">
+      <input type="checkbox" class="task-list-item-checkbox" disabled=""> Profit!</li>
+      </ul>
 
-<tr>
-<th>
-<a href=https://www.hs.fi/ulkomaat/art-2000005916115.html?ref=rss>The Guardian: Syrjäiselle bangladeshilaiselle saarelle rakennetaan vankilan­kaltaista leiriä jopa sadalle­tuhannelle rohingya-muslimille (15:40) - HS</a>
-</th>
-</tr>
+      <p>And a nested list:</p>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/plus/harald-schmidt-hat-angela-merkel-im-dezember-noch-termine-a-161ac7fc-7902-4b72-9965-bb500fcd7891#ref=rss>Harald Schmidts Videokolumne: Hat Angela Merkel im Dezember noch Termine? (15:39) - Spiegel</a>
-</th>
-</tr>
+      <ul class="task-list">
+      <li>Jackson 5
 
-<tr>
-<th>
-<a href=https://www.hs.fi/kotimaa/art-2000005915918.html?ref=rss>Rokottamaton esikoulu­ikäinen sairastui tuhka­rokkoon Pohjan­maalla – THL: Lisä­tartuntoja tulee varmasti, altistuneita ainakin yli sata (15:32) - HS</a>
-</th>
-</tr>
+      <ul class="task-list">
+      <li>Michael</li>
+      <li>Tito</li>
+      <li>Jackie</li>
+      <li>Marlon</li>
+      <li>Jermaine</li>
+      </ul>
+      </li>
+      <li>TMNT
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/netzwelt/netzpolitik/ulrich-kelber-spd-politiker-wird-neuer-bundesdatenschutzbeauftragter-a-1241030.html#ref=rss>Bundestag stimmt für SPD-Abgeordneten: Ulrich Kelber wird oberster Datenschützer (15:16) - Spiegel</a>
-</th>
-</tr>
+      <ul class="task-list">
+      <li>Leonardo</li>
+      <li>Michelangelo</li>
+      <li>Donatello</li>
+      <li>Raphael</li>
+      </ul>
+      </li>
+      </ul>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/international/article/2018/11/29/enquete-russe-aux-etats-unis-michael-cohen-l-ex-avocat-de-trump-plaide-coupable-d-avoir-menti-devant-le-congres_5390437_3210.html?xtor=RSS-3208>Enquête russe : Michael Cohen plaide coupable d’avoir menti au Congrès (15:15) - LeMonde</a>
-</th>
-</tr>
+      <p>Definition lists can be used with HTML syntax. Definition terms are bold and italic.</p>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/wirtschaft/unternehmen/edeka-rueckruf-supermarktkette-nimmt-lebkuchen-aus-dem-verkauf-a-1241108.html#ref=rss>Kunststoffteilchen: Edeka ruft Lebkuchen zurück (15:14) - Spiegel</a>
-</th>
-</tr>
+      <dl>
+          <dt>Name</dt>
+          <dd>Godzilla</dd>
+          <dt>Born</dt>
+          <dd>1952</dd>
+          <dt>Birthplace</dt>
+          <dd>Japan</dd>
+          <dt>Color</dt>
+          <dd>Green</dd>
+      </dl>
 
-<tr>
-<th>
-<a href=http://www.spiegel.de/politik/deutschland/ralph-brinkhaus-es-gibt-wichtigere-themen-als-die-fluechtlingspolitik-a-1241041.html#ref=rss>Unionsfraktionschef Brinkhaus: "Herr Knigge wäre mit uns zufrieden" (15:07) - Spiegel</a>
-</th>
-</tr>
+      <hr>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-europe-46382658>Twitter suspends account impersonating Russian president Putin (14:48) - BBC</a>
-</th>
-</tr>
+      <p>Tables should have bold headings and alternating shaded rows.</p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/affaire-khashoggi/article/2018/11/29/le-g20-de-buenos-aires-sommet-test-pour-le-prince-heritier-saoudien_5390410_5390206.html?xtor=RSS-3208>Le G20 de Buenos Aires, sommet test pour le prince héritier saoudien (14:36) - LeMonde</a>
-</th>
-</tr>
+      <table>
+      <thead>
+      <tr>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Year</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Michael Jackson</td>
+      <td>Thriller</td>
+      <td>1982</td>
+      </tr>
+      <tr>
+      <td>Prince</td>
+      <td>Purple Rain</td>
+      <td>1984</td>
+      </tr>
+      <tr>
+      <td>Beastie Boys</td>
+      <td>License to Ill</td>
+      <td>1986</td>
+      </tr>
+      </tbody>
+      </table>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-asia-46386507>Jiang Jinfu: Chinese actor held on domestic violence charge (13:46) - BBC</a>
-</th>
-</tr>
+      <p>If a table is too wide, it should condense down and/or scroll horizontally.</p>
 
-<tr>
-<th>
-<a href=https://www.hs.fi/kotimaa/art-2000005915838.html?ref=rss>Journalisti-lehti: Raiskauksesta tuomittu toimittaja on ahdistellut vuosien aikana useita naisia (13:12) - HS</a>
-</th>
-</tr>
+      <table>
+      <thead>
+      <tr>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Label</th>
+      <th>Awards</th>
+      <th>Songs</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Michael Jackson</td>
+      <td>Thriller</td>
+      <td>1982</td>
+      <td>Epic Records</td>
+      <td>Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical</td>
+      <td>Wanna Be Startin' Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life</td>
+      </tr>
+      <tr>
+      <td>Prince</td>
+      <td>Purple Rain</td>
+      <td>1984</td>
+      <td>Warner Brothers Records</td>
+      <td>Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&amp;B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal</td>
+      <td>Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain</td>
+      </tr>
+      <tr>
+      <td>Beastie Boys</td>
+      <td>License to Ill</td>
+      <td>1986</td>
+      <td>Mercury Records</td>
+      <td>noawardsbutthistablecelliswide</td>
+      <td>Rhymin &amp; Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill</td>
+      </tr>
+      </tbody>
+      </table>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-us-canada-46384197>Samuel Little: US serial killer 'admits 90 murders' (11:20) - BBC</a>
-</th>
-</tr>
+      <hr>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/business-46382722>Money laundering raid at Deutsche Bank (11:20) - BBC</a>
-</th>
-</tr>
+      <p>Code snippets like <code>var foo = "bar";</code> can be shown inline.</p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/police-justice/article/2018/11/29/meurtre-d-alexia-daval-son-mari-jonathann-de-retour-devant-le-juge_5390299_1653578.html?xtor=RSS-3208>Meurtre d’Alexia Daval : son mari, Jonathann, de retour devant le juge (10:37) - LeMonde</a>
-</th>
-</tr>
+      <p>Also, <code>this should vertically align</code> <del><code>with this</code></del> <del>and this</del>.</p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/sante/article/2018/11/29/fin-de-vie-la-sedation-profonde-peine-a-se-mettre-en-place_5390291_1651302.html?xtor=RSS-3208>Fin de vie : la sédation profonde « peine à se mettre en place » (10:31) - LeMonde</a>
-</th>
-</tr>
+      <p>Code can also be shown in a block element.</p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/societe/article/2018/11/29/quand-le-gouvernement-sous-traite-a-des-avocats-l-expose-des-motifs-de-la-loi-des-mobilites_5390274_3224.html?xtor=RSS-3208>Quand l’Etat décide de sous-traiter la rédaction de « l’exposé des motifs » de la loi « mobilités » (10:21) - LeMonde</a>
-</th>
-</tr>
+      <pre><code>var foo = "bar";
+</code></pre>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/economie/article/2018/11/29/carlos-ghosn-en-attente-d-une-decision-du-parquet-de-tokyo-sur-le-prolongement-de-sa-garde-a-vue_5390272_3234.html?xtor=RSS-3208>Carlos Ghosn en attente d’une décision sur le prolongement de sa garde à vue (10:19) - LeMonde</a>
-</th>
-</tr>
+      <p>Code can also use syntax highlighting.</p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/economie/article/2018/11/29/nucleaire-le-satisfecit-interne-du-patron-d-edf_5390257_3234.html?xtor=RSS-3208>Nucléaire : EDF se félicite des orientations prises par le gouvernement (10:00) - LeMonde</a>
-</th>
-</tr>
+      <div class="highlight highlight-Javascript"><pre><span class="pl-k">var</span> foo <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>bar<span class="pl-pds">"</span></span>;</pre></div>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/politique/article/2018/11/29/europeennes-bellamy-l-hypothese-conservatrice-de-wauquiez_5390228_823448.html?xtor=RSS-3208>François-Xavier Bellamy, l’hypothèse conservatrice de Wauquiez pour les européennes (09:05) - LeMonde</a>
-</th>
-</tr>
+      <pre><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.</code></pre>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-asia-india-46382157>India outrage as mall shames woman for breastfeeding (08:19) - BBC</a>
-</th>
-</tr>
+      <div class="highlight highlight-Javascript"><pre><span class="pl-k">var</span> foo <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>The same thing is true for code with syntax highlighting. A single line of code should horizontally scroll if it is really long.<span class="pl-pds">"</span></span>;</pre></div>
 
-<tr>
-<th>
-<a href=https://www.bbc.co.uk/news/world-asia-46381697>Philippines drug war: Police guilty of murdering Kian Delos Santos (07:20) - BBC</a>
-</th>
-</tr>
+      <p>Inline code inside table cells should still be distinguishable.</p>
 
-<tr>
-<th>
-<a href=https://www.hs.fi/paikalliset/jarvenpaa/art-2000005915198.html?ref=rss>Lotta Åman näki omin silmin, millainen teinien ihannoima Etelä-Korea todellisuudessa on – ”Nuorilla ei ole elämää” (06:44) - HS</a>
-</th>
-</tr>
+      <table>
+      <thead>
+      <tr>
+      <th>Language</th>
+      <th>Code</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Javascript</td>
+      <td><code>var foo = "bar";</code></td>
+      </tr>
+      <tr>
+      <td>Ruby</td>
+      <td><code>foo = "bar"</code></td>
+      </tr>
+      </tbody>
+      </table>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/politique/article/2018/11/29/la-france-insoumise-en-pleine-tourmente_5390170_823448.html?xtor=RSS-3208>La maison Mélenchon se fissure au grand jour (05:32) - LeMonde</a>
-</th>
-</tr>
+      <hr>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/international/article/2018/11/29/brexit-beaucoup-de-previsions-catastrophiques-pour-rien_5390155_3210.html?xtor=RSS-3208>Brexit : beaucoup de prévisions catastrophiques pour rien (05:26) - LeMonde</a>
-</th>
-</tr>
+      <p>Small images should be shown at their actual size.</p>
 
-<tr>
-<th>
-<a href=https://dynamic.hs.fi/2018/norja/index.html?ref=rss>Muuta maalle ja vaurastu (04:24) - HS</a>
-</th>
-</tr>
+      <p><a href="https://camo.githubusercontent.com/16a9d5241f679b6429fc0597f10816dd2665bbb2/687474703a2f2f706c6163656b697474656e2e636f6d2f672f3330302f3230302f" target="_blank"><img src="https://camo.githubusercontent.com/16a9d5241f679b6429fc0597f10816dd2665bbb2/687474703a2f2f706c6163656b697474656e2e636f6d2f672f3330302f3230302f" alt="" data-canonical-src="https://placekitten.com/g/300/200/" style="max-width:100%;"></a></p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/sport/article/2018/11/28/handball-apres-leur-titre-mondial-les-francaises-veulent-decrocher-un-premier-sacre-europeen_5390023_3242.html?xtor=RSS-3208>Handball : les Françaises veulent décrocher un premier sacre européen (16:39) - LeMonde</a>
-</th>
-</tr>
+      <p>Large images should always scale down and fit in the content container.</p>
 
-<tr>
-<th>
-<a href=https://www.lemonde.fr/les-decodeurs/article/2018/11/28/gilets-jaunes-un-cas-d-ecole-de-la-polarisation-du-debat-public_5389942_4355770.html?xtor=RSS-3208>« Gilets jaunes » : un cas d’école de la polarisation du débat public (14:21) - LeMonde</a>
-</th>
-</tr>
+      <p><a href="https://camo.githubusercontent.com/afe46418285497605cf4f6376b75f8c818658fb1/687474703a2f2f706c6163656b697474656e2e636f6d2f672f313230302f3830302f" target="_blank"><img src="https://camo.githubusercontent.com/afe46418285497605cf4f6376b75f8c818658fb1/687474703a2f2f706c6163656b697474656e2e636f6d2f672f313230302f3830302f" alt="" data-canonical-src="https://placekitten.com/g/1200/800/" style="max-width:100%;"></a></p>
 
-    </tbody>
-  </table>
-</body>
+      <pre><code>This is the final element on the page and there should be no margin below this.</code></pre>
 
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+
+    </section>
+
+  </body>
 </html>
