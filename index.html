@@ -5,6 +5,48 @@
   <meta charset="utf-8">
   <title>Is there less snow?</title>
   <meta name="generator" content="Google Web Designer 5.0.1.1129">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script>
+    L_PREFER_CANVAS = false;
+    L_NO_TOUCH = false;
+    L_DISABLE_3D = false;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
+  <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css">
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+  <style>
+    #map {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+    }
+  </style>
+  <style>
+    #map_7d1e84101cae4ca8a0cba4c22e0bc2f4 {
+      position: absolute;
+      left: 200px;
+      right: 300px;
+      top: 500px;
+      height: 180px;
+    }
+  </style>
   <style type="text/css" id="gwd-text-style">
     p {
       margin: 0px;
@@ -58,14 +100,6 @@
       height: 59px;
       transform-origin: 479.844px 29.457px 0px;
     }
-    .gwd-img-s9hu {
-      position: absolute;
-      width: 243px;
-      height: 367px;
-      transform-origin: 121.567px 183.436px 0px;
-      left: 740px;
-      top: 470px;
-    }
     .gwd-p-6h7q {
       position: absolute;
       width: 244.211px;
@@ -115,8 +149,8 @@
       width: 1000px;
       height: 286px;
       transform-origin: 500.02px 143.069px 0px;
-      left: 18px;
-      top: 2307px;
+      left: 20px;
+      top: 2349px;
     }
     .gwd-p-1r1l {
       width: 1000px;
@@ -135,11 +169,80 @@
     }
     .gwd-img-13s1 {
       position: absolute;
-      left: 22px;
       top: 1626px;
       width: 991px;
       height: 502px;
       transform-origin: 495.579px 250.83px 0px;
+      left: 28px;
+    }
+    .gwd-div-y9hh {
+      left: 17px;
+      top: 2775px;
+    }
+    .gwd-div-1dnq {
+      position: absolute;
+      width: 378.173px;
+      height: 516.947px;
+      left: 984.986px;
+      top: 62.005px;
+    }
+    .gwd-div-limp {
+      position: absolute;
+      width: 245.728px;
+      height: 372.684px;
+      left: 739.475px;
+      top: 476.321px;
+    }
+    .gwd-div-105k {
+      position: absolute;
+      width: 5.26316px;
+      height: 43.4211px;
+      left: 1152.63px;
+      top: 253.952px;
+    }
+    .gwd-div-6fcz {
+      position: absolute;
+      height: 395.016px;
+      left: 741.001px;
+      top: 453.989px;
+      width: 266px;
+    }
+    #map_7d1e84101cae4ca8a0cba4c22e0bc2f4 {
+      left: 730px;
+      top: 463px;
+      height: 386px;
+      transform-origin: 133.015px 192.978px 0px;
+    }
+    .gwd-div-67er {
+      left: 34px;
+      top: 1451px;
+    }
+    .gwd-p-1er6 {
+      height: 196px;
+      transform-origin: 499.774px 97.5784px 0px;
+      font-size: 20px;
+      left: 17px;
+      top: 2832px;
+    }
+    .gwd-span-1q7e {
+      font-style: italic;
+    }
+    .gwd-p-105m {
+      left: 25px;
+      top: 2635px;
+    }
+    .gwd-p-sup5 {
+      position: absolute;
+      width: 1003.95px;
+      height: 169.737px;
+      left: 13px;
+      top: 3119px;
+      font-family: Verdana;
+      font-size: 20px;
+    }
+    .gwd-div-1adh {
+      left: 12px;
+      top: 3059px;
     }
   </style>
 </head>
@@ -147,38 +250,296 @@
 <body class="htmlNoPages">
   <p class="gwd-p-zcdv">Is there less snow?</p>
   <img src="assets/a1.jpg" id="a1" class="gwd-img-1lqh">
-  <p class="gwd-p-1gpy">Analyzing the data of ten weather stations in Finland (1960-2000) reveals insights on snow depth, the length of the snow period and evolution of average temperatures.&nbsp;</p>
+  <p class="gwd-p-1gpy">Analyzing the data of ten weather stations in Finland (1960-2000) reveals insights on snowing and the evolution of temperatures throughout the time.&nbsp;</p>
   <div class="gwd-p-1gpy gwd-p-1ijp">The data provided by the <a href="https://ilmatieteenlaitos.fi/havaintojen-lataus#!/">Finnish Institute of Meterology</a>&nbsp;of snow and weather data, gives the opportunity to look at three questions over a 50 year period:<br>
     <br>
     &nbsp; &nbsp; - Are temperatures on the rise?<br>
     &nbsp; &nbsp; - On average, is there less snow?<br>
-    &nbsp; &nbsp; - Is there a correlation between temperature and snow?<br>
+    &nbsp; &nbsp; - Are there more extreme events?<br>
     <br>
     <br>
     <br>
     
   </div>
+  <div class="gwd-div-6fcz" id="map_7d1e84101cae4ca8a0cba4c22e0bc2f4"></div>
   <div class="gwd-p-1gpy gwd-p-1ijp gwd-div-102i">All in all, each weather station observed a positive correlation between time and temperature across the period, but these are very small (r = 0.03 to 0.07)<br>
     <br>
     <br>
     <br>
     
   </div>
-  <div class="gwd-p-1gpy gwd-p-1ijp gwd-div-102i gwd-div-ocua">Regarding the correlation between snow depth and time, there is no conclusive correlation. While we can observe certain decreasing patterns like in Turku, Kouvola, Helsinki), it is even the opposite for other weather stations.<br>
-    Taking the example of one weather station (below), we can see a highly cyclical pattern concerning net snow gain/loss. There seems to be no real evolution both in the extremities nor in the yearly patterns.&nbsp; &nbsp;<br>
+  <div class="gwd-p-1gpy gwd-p-1ijp gwd-div-102i gwd-div-ocua">The highest recorded net snowing in a day was in Turku with 45 cm (22 November 1989).&nbsp;<br>
+    Regarding the correlation between snow depth and time, there is no conclusive correlation. We can observe certain decreasing patterns both visually and in terms of correlation in Turku, Kouvola, Helsinki, but this is not the case for other weather
+    stations.<br>
+    Taking the example of one weather station (below), we can see a highly cyclical pattern concerning net snow gain/loss. There seems to be no real evolution both in the extremities nor in the yearly patterns.&nbsp;<br>
     <br>
     <br>
     <br>
     
   </div>
-  <img src="assets/weather_stations_map.PNG" id="weather_stations_map" class="gwd-img-s9hu">
+  <div class="gwd-p-1gpy gwd-p-1ijp gwd-div-102i gwd-div-ocua gwd-div-67er">We can see a hint of this in the graphs, but given the many outlier years, one cannot draw direct conclusions. The weather station that recorded the highest temperature in the dataset was Kuopio 35.0 °C (29 July 2010), whereas the coldest was Sodankylä
+    -49.5 °C (28 January 1999).&nbsp;<br>
+    <br>
+    <br>
+    
+  </div>
   <p class="gwd-p-6h7q">Location of weather stations. Note: the population density is higher in the south.</p>
-  <p class="gwd-p-6h7q gwd-p-1r1l gwd-gen-12ovgwdanimation">Weather station (Helsinki): A loss (snow melting) would result in a point below 0°, whereas snowing results in a point over 0°.</p>
+  <p class="gwd-p-6h7q gwd-p-1r1l gwd-gen-12ovgwdanimation gwd-p-105m">Weather station (Helsinki): A loss (snow melting) would result in a point below 0°, whereas snowing results in a point over 0°.</p>
+  <p class="gwd-p-6h7q gwd-p-1r1l gwd-gen-12ovgwdanimation gwd-p-1er6"><span class="gwd-span-1q7e">"Extreme weather includes unexpected, unusual, unpredictable, severe or unseasonal weather; weather at the extremes of the historical distribution"</span> - <a href="https://en.wikipedia.org/wiki/Extreme_weather">Wikipedia</a>.
+    Such events are also present in the dataset. For instance for Helsinki on 1 November 1968, 30 cm of snow surplus was recorded, whereas four days later, 20 cm melted in one day.&nbsp;</p>
   <div class="gwd-div-1pdp"><span class="gwd-span-1t84">Are temperatures on the rise?</span>&nbsp;</div>
   <div class="gwd-div-1pdp gwd-div-19dj"><span class="gwd-span-1t84">Is there less snow?</span>&nbsp;</div>
+  <div class="gwd-div-1pdp gwd-div-19dj gwd-div-y9hh"><span class="gwd-span-1t84">Are there more extreme events?</span>&nbsp;</div>
+  <div class="gwd-div-1pdp gwd-div-19dj gwd-div-y9hh gwd-div-1adh"><span class="gwd-span-1t84">Conclusion</span>&nbsp;</div>
   <img src="assets/Example1.png" id="Example1" class="gwd-img-1lb2">
   <img src="assets/temp_graph.png" id="temp_graph" class="gwd-img-1t9u">
   <img src="assets/snow.png" id="snow" class="gwd-img-13s1">
+  <script>
+    var bounds = null;
+
+
+    var map_7d1e84101cae4ca8a0cba4c22e0bc2f4 = L.map(
+      'map_7d1e84101cae4ca8a0cba4c22e0bc2f4', {
+        center: [65.5236, 28.675],
+        zoom: 4,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+      });
+
+
+
+    var tile_layer_5a32f626f062424ba996d709a61381bc = L.tileLayer(
+      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "subdomains": "abc"
+      }).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+    var marker_6bb7828e76da4feba7209ac8a00e5e9a = L.marker(
+      [60.1674086, 24.9425683], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_9d8570c07ad5468fa9bd7e13a7debeba = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_bf99a91c31214b719b8eea48138a89a9 = $('<div id="html_bf99a91c31214b719b8eea48138a89a9" style="width: 100.0%; height: 100.0%;">Helsinki</div>')[0];
+    popup_9d8570c07ad5468fa9bd7e13a7debeba.setContent(html_bf99a91c31214b719b8eea48138a89a9);
+
+
+    marker_6bb7828e76da4feba7209ac8a00e5e9a.bindPopup(popup_9d8570c07ad5468fa9bd7e13a7debeba);
+
+
+
+
+    var marker_4cf86aa32a5f401194fbcec533a45cf7 = L.marker(
+      [62.2393002, 25.745951], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_6f570abe905749b689381e0d1aa4875f = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_ad42cef1a04c4c52888abe86c61b0505 = $('<div id="html_ad42cef1a04c4c52888abe86c61b0505" style="width: 100.0%; height: 100.0%;">Jyv崫yl伯div>')[0];
+    popup_6f570abe905749b689381e0d1aa4875f.setContent(html_ad42cef1a04c4c52888abe86c61b0505);
+
+
+    marker_4cf86aa32a5f401194fbcec533a45cf7.bindPopup(popup_6f570abe905749b689381e0d1aa4875f);
+
+
+
+
+    var marker_4aeffa78e6ff469899081f4c6bc9635e = L.marker(
+      [64.2240872, 27.7334227], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_a7393ff3edf84d4fb3f1a0c7af02a734 = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_289b14eb1d534c399723103e6e6871f5 = $('<div id="html_289b14eb1d534c399723103e6e6871f5" style="width: 100.0%; height: 100.0%;">Kajaani</div>')[0];
+    popup_a7393ff3edf84d4fb3f1a0c7af02a734.setContent(html_289b14eb1d534c399723103e6e6871f5);
+
+
+    marker_4aeffa78e6ff469899081f4c6bc9635e.bindPopup(popup_a7393ff3edf84d4fb3f1a0c7af02a734);
+
+
+
+
+    var marker_c40fa8cca0a74456ba099187c3a284e4 = L.marker(
+      [60.8849815, 26.9229413], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_36d2f37e38a74ae3b81ea36fbe79236b = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_0f057adb704d4843a88d71058d60bb02 = $('<div id="html_0f057adb704d4843a88d71058d60bb02" style="width: 100.0%; height: 100.0%;">Kouvola-Utti</div>')[0];
+    popup_36d2f37e38a74ae3b81ea36fbe79236b.setContent(html_0f057adb704d4843a88d71058d60bb02);
+
+
+    marker_c40fa8cca0a74456ba099187c3a284e4.bindPopup(popup_36d2f37e38a74ae3b81ea36fbe79236b);
+
+
+
+
+    var marker_57edc4438fd94323b8dbab40b569fe35 = L.marker(
+      [62.8924601, 27.6781839], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_f484616d7bb94acba35530c578771c4f = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_41e8042ea0904b669053f63d653df452 = $('<div id="html_41e8042ea0904b669053f63d653df452" style="width: 100.0%; height: 100.0%;">Kuopio</div>')[0];
+    popup_f484616d7bb94acba35530c578771c4f.setContent(html_41e8042ea0904b669053f63d653df452);
+
+
+    marker_57edc4438fd94323b8dbab40b569fe35.bindPopup(popup_f484616d7bb94acba35530c578771c4f);
+
+
+
+
+    var marker_6a7b7ba504f649b2ac3719a16cdb16f9 = L.marker(
+      [61.0582424, 28.1875302], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_e1c5391a79f447369f18c993454a94bf = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_7442d1fff1c341f6860bc86162f4a2ee = $('<div id="html_7442d1fff1c341f6860bc86162f4a2ee" style="width: 100.0%; height: 100.0%;">Lappeenranta</div>')[0];
+    popup_e1c5391a79f447369f18c993454a94bf.setContent(html_7442d1fff1c341f6860bc86162f4a2ee);
+
+
+    marker_6a7b7ba504f649b2ac3719a16cdb16f9.bindPopup(popup_e1c5391a79f447369f18c993454a94bf);
+
+
+
+
+    var marker_454d7a94b31442e6994996e58bc0aeaa = L.marker(
+      [65.0118734, 25.4716809], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_4276bddf25964071a34ee11c141b577b = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_06307bb048eb4e4ea0ab71afed761a70 = $('<div id="html_06307bb048eb4e4ea0ab71afed761a70" style="width: 100.0%; height: 100.0%;">Oulu</div>')[0];
+    popup_4276bddf25964071a34ee11c141b577b.setContent(html_06307bb048eb4e4ea0ab71afed761a70);
+
+
+    marker_454d7a94b31442e6994996e58bc0aeaa.bindPopup(popup_4276bddf25964071a34ee11c141b577b);
+
+
+
+
+    var marker_00ea0cd371a84e48952469c027f25d6b = L.marker(
+      [62.7954104, 22.8442015], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_7114ac896fb0460d8679427e4398f716 = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_4ee74e53a71f4ec7aac79cfae0804cce = $('<div id="html_4ee74e53a71f4ec7aac79cfae0804cce" style="width: 100.0%; height: 100.0%;">Sein嫯ki</div>')[0];
+    popup_7114ac896fb0460d8679427e4398f716.setContent(html_4ee74e53a71f4ec7aac79cfae0804cce);
+
+
+    marker_00ea0cd371a84e48952469c027f25d6b.bindPopup(popup_7114ac896fb0460d8679427e4398f716);
+
+
+
+
+    var marker_3bf9061a5606445fa8d6d334d07966ea = L.marker(
+      [67.4189716, 26.5902179], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_23f24b7a99db43148114ababdd3be005 = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_244ceb2390694fe096dc97c56b1b2cad = $('<div id="html_244ceb2390694fe096dc97c56b1b2cad" style="width: 100.0%; height: 100.0%;">Sodankyl伯div>')[0];
+    popup_23f24b7a99db43148114ababdd3be005.setContent(html_244ceb2390694fe096dc97c56b1b2cad);
+
+
+    marker_3bf9061a5606445fa8d6d334d07966ea.bindPopup(popup_23f24b7a99db43148114ababdd3be005);
+
+
+
+
+    var marker_2dc727d3d02840caa35c7102b4840c30 = L.marker(
+      [60.4517531, 22.2670522], {
+        icon: new L.Icon.Default()
+      }
+    ).addTo(map_7d1e84101cae4ca8a0cba4c22e0bc2f4);
+
+
+    var popup_55dacdfad49b49b483484f8a959608bc = L.popup({
+      maxWidth: '300'
+
+    });
+
+
+    var html_1ec666fdc61b4b67b884277a56998020 = $('<div id="html_1ec666fdc61b4b67b884277a56998020" style="width: 100.0%; height: 100.0%;">Turku</div>')[0];
+    popup_55dacdfad49b49b483484f8a959608bc.setContent(html_1ec666fdc61b4b67b884277a56998020);
+
+
+    marker_2dc727d3d02840caa35c7102b4840c30.bindPopup(popup_55dacdfad49b49b483484f8a959608bc);
+  </script>
+  <p class="gwd-p-sup5">While weather and climate are closely interlinked, it is false to attribute these results to climate change. The average temperatures have increased, while some stations record decreases in snowing/snow depth.&nbsp;</p>
 </body>
 
 </html>
